@@ -1,0 +1,284 @@
+<html>
+  <head>
+    <title>array</title>
+    <style>
+      body {
+        background-image: url(image/fantasy-girly-wallpaper-17.jpg);
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        font-size: 30px;
+        direction: ltr;
+        font-weight: bold;
+      }
+      ul,
+      ol {
+        list-style: none;
+        padding: 0;
+        font-size: 12px;
+        color: #fffefe;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+      }
+      li{
+        width: 16%;
+        border-radius: 31px;
+        padding: 0px 0 0 11px;
+        margin: 9px;
+        background-color: #3f5675;
+      }
+      
+        img{
+          width: 207px;
+          height: auto;
+          margin: 4px 9px 0 -3px;
+        }
+     
+        h1{
+          display: inline-block;
+          font-size: 20px;
+          color: rgba(255, 255, 255, 0.85);
+          margin: 10px;
+        }
+        h2{
+          font-size: 20px;
+          color: black;
+        }
+        p{
+          margin: -14px;
+          padding: 11px;
+          color: #fffefe;
+        }
+        span img{
+          width: 25px;
+          height: auto;
+          padding: 0 10px 0 0;
+        }
+       .titleTag{
+        font-size: 20px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="parent"></div>
+    <script>
+      var list = document.querySelector(".List");
+      var films = 
+      {
+    "data": [{
+        "id": 161,
+        "title": "Munna Bhai M.B.B.S.",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0374887_poster.jpg",
+        "year": "2003",
+        "country": "India",
+        "imdb_rating": "8.3",
+        "genres": ["Comedy", "Drama"]
+    }, {
+        "id": 162,
+        "title": "The Big Lebowski",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0118715_poster.jpg",
+        "year": "1998",
+        "country": "USA, UK",
+        "imdb_rating": "8.2",
+        "genres": ["Comedy", "Crime", "Mystery"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0118715_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0118715_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0118715_screenshot3.jpg"]
+    }, {
+        "id": 163,
+        "title": "Tokyo Story",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0046438_poster.jpg",
+        "year": "1953",
+        "country": "Japan",
+        "imdb_rating": "8.3",
+        "genres": ["Drama"]
+    }, {
+        "id": 164,
+        "title": "Dial M for Murder",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0046912_poster.jpg",
+        "year": "1954",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Crime", "Film-Noir", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0046912_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0046912_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0046912_screenshot3.jpg"]
+    }, {
+        "id": 165,
+        "title": "The Deer Hunter",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0077416_poster.jpg",
+        "year": "1978",
+        "country": "UK, USA",
+        "imdb_rating": "8.2",
+        "genres": ["Drama", "History", "War"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0077416_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0077416_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0077416_screenshot3.jpg"]
+    }, {
+        "id": 166,
+        "title": "Trainspotting",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0117951_poster.jpg",
+        "year": "1996",
+        "country": "UK",
+        "imdb_rating": "8.2",
+        "genres": ["Drama"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0117951_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0117951_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0117951_screenshot3.jpg"]
+    }, {
+        "id": 167,
+        "title": "Gone with the Wind",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0031381_poster.jpg",
+        "year": "1939",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Drama", "History", "Romance"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0031381_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0031381_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0031381_screenshot3.jpg"]
+    }, {
+        "id": 168,
+        "title": "Fargo",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0116282_poster.jpg",
+        "year": "1996",
+        "country": "USA, UK",
+        "imdb_rating": "8.1",
+        "genres": ["Crime", "Drama", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0116282_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0116282_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0116282_screenshot3.jpg"]
+    }, {
+        "id": 169,
+        "title": "Finding Nemo",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0266543_poster.jpg",
+        "year": "2003",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Animation", "Adventure", "Comedy"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0266543_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0266543_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0266543_screenshot3.jpg"]
+    }, {
+        "id": 170,
+        "title": "Cool Hand Luke",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0061512_poster.jpg",
+        "year": "1967",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Crime", "Drama"]
+    }],
+    "metadata": {
+        "current_page": "17",
+        "per_page": 10,
+        "page_count": 25,
+        "total_count": 250
+    }
+}
+      var films2 = 
+      {
+    "data": [{
+        "id": 241,
+        "title": "Strangers on a Train",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0044079_poster.jpg",
+        "year": "1951",
+        "country": "USA",
+        "imdb_rating": "8.1",
+        "genres": ["Crime", "Film-Noir", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0044079_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0044079_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0044079_screenshot3.jpg"]
+    }, {
+        "id": 242,
+        "title": "Kind Hearts and Coronets",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0041546_poster.jpg",
+        "year": "1949",
+        "country": "UK",
+        "imdb_rating": "8.1",
+        "genres": ["Comedy", "Crime"]
+    }, {
+        "id": 243,
+        "title": "Sin City",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0401792_poster.jpg",
+        "year": "2005",
+        "country": "USA",
+        "imdb_rating": "8.1",
+        "genres": ["Crime", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0401792_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0401792_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0401792_screenshot3.jpg"]
+    }, {
+        "id": 244,
+        "title": "The Battle of Algiers",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0058946_poster.jpg",
+        "year": "1966",
+        "country": "Italy, Algeria",
+        "imdb_rating": "8.1",
+        "genres": ["Drama", "War"]
+    }, {
+        "id": 245,
+        "title": "Dog Day Afternoon",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0072890_poster.jpg",
+        "year": "1975",
+        "country": "USA",
+        "imdb_rating": "8.0",
+        "genres": ["Crime", "Drama"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0072890_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0072890_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0072890_screenshot3.jpg"]
+    }, {
+        "id": 246,
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0325980_poster.jpg",
+        "year": "2003",
+        "country": "USA",
+        "imdb_rating": "8.1",
+        "genres": ["Action", "Adventure", "Fantasy"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0325980_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0325980_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0325980_screenshot3.jpg"]
+    }, {
+        "id": 247,
+        "title": "The Help",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt1454029_poster.jpg",
+        "year": "2011",
+        "country": "USA, India, United Arab Emirates",
+        "imdb_rating": "8.1",
+        "genres": ["Drama"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt1454029_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt1454029_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt1454029_screenshot3.jpg"]
+    }, {
+        "id": 248,
+        "title": "The Imitation Game",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt2084970_poster.jpg",
+        "year": "2014",
+        "country": "UK, USA",
+        "imdb_rating": "8.1",
+        "genres": ["Biography", "Drama", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt2084970_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt2084970_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt2084970_screenshot3.jpg"]
+    }, {
+        "id": 249,
+        "title": "Queen",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt3322420_poster.jpg",
+        "year": "2013",
+        "country": "India",
+        "imdb_rating": "8.3",
+        "genres": ["Adventure", "Comedy", "Drama"]
+    }, {
+        "id": 250,
+        "title": "Ip Man",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt1220719_poster.jpg",
+        "year": "2008",
+        "country": "Hong Kong, China",
+        "imdb_rating": "8.1",
+        "genres": ["Action", "Biography", "Drama"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt1220719_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt1220719_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt1220719_screenshot3.jpg"]
+    }],
+    "metadata": {
+        "current_page": "25",
+        "per_page": 10,
+        "page_count": 25,
+        "total_count": 250
+    }
+}
+      function renderList(data,title,titleTag){
+        var parentDiv = document.createElement("DIV")
+        parentDiv.classList.add("list");
+        var ul = document.createElement("ul");
+        var h2 = document.createElement("titleTag");
+        h2.innerHTML = title;
+        parentDiv.appendChild(h2)
+        parentDiv.appendChild(ul)
+        var contentBox = document.querySelector(".parent");
+        data.forEach(function(movie){
+          var liElement = document.createElement("LI");
+        liElement.innerHTML = `<br></br><img style="border-radius: 10px"src=${movie.poster} /> <h2>${movie.title}</h2><p >${(movie.genres.toString())}</p><br></br>`
+        ul.appendChild(liElement);
+        })
+        contentBox.appendChild(parentDiv);
+      }
+      renderList(films.data , "special");
+      renderList(films2.data , " The best ","h3");
+    </script>
+  </body>
+</html>
